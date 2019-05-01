@@ -2,10 +2,12 @@ FROM haproxy:1.8.20
 
 RUN apt-get update					&&  \
     apt-get --yes install rsyslog git gcc make          &&  \
-    # here's the catch: by creating a soft-link that 
-    # links /var/log/haproxy.log to /dev/stdout whatever 
+    #
+    # Here's the catch: by creating a soft-link that 
+    # links /var/log/system.log to /dev/stdout whatever 
     # rsyslogd writes to the file will endup being
     # propagated to the standard output of the container
+    #
     ln -sf /dev/stdout /var/log/system.log && \
     #
     # Now install s6 supervisor
