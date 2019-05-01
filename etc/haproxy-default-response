@@ -1,0 +1,14 @@
+HTTP/1.0 200 Found
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+<html>
+<head>
+<title>Hello World!</title>
+</head>
+<body>
+<p>This is a test HaProxy configuration!</p>
+<p>Replace /etc/haproxy.cfg with your own configuration!</p>
+</body>
+</html>
